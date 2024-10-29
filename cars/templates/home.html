@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block main %}
+{% load static %}
+<div class="carrosel-container">
+  <div class="carrosel">
+    <img src="{% static 'imgs/banner0.jpg' %}" alt="">
+    <!-- <video id="video" src="video/carroVideo.mp4" autoplay loop muted></video> -->
+  </div>
+  <div class="buscar-container container">
+    <div>
+      <form method="get">
+        <input type="text" name="search" placeholder="Digite a marca ou o modelo do veículo..." autocomplete="off">
+        <input type="submit" value="Buscar Veiculos" class="btn buscar">
+        <button type="submit" class="btn-search icon"><img src="{% static 'imgs/search.svg' %}" alt=""></button>
+
+      </form>
+    </div>
+  </div>
+</div>
+<main class="container">
+  <h1>Destaques</h1>
+  <div class="grid-conteudo">
+    {% for car in cars %}
+    <div class="card">
+      <img src="{{ car.foto_carro.url }}" alt="">
+      <div class="card-info">
+
+        <div class="titulo">{{car.marca}}/{{car.modelo}}</div>
+
+        <div class="ano">{{car.ano_fabrica}} / {{car.ano_lancamento}}</div>
+        <div class="quilometragem">{{car.quilometragem}} Km</div>
+        <div class="preco">R$ {{car.preco}}</div>
+      </div>
+
+      <a class=" btn verMais" href="{% url 'car' id=car.pk %}">
+
+        <img src="{% static 'imgs/eye.svg' %}" alt="">
+        <span>Ver Mais</span>
+
+
+      </a>
+
+    </div>
+    {% endfor %}
+  </div>
+
+</main>
+{% endblock main %}

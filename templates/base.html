@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>{{title}}</title>
+</head>
+
+<body id="{{id}}">
+  <header class="container">
+    <nav class="menu-principal">
+      <a href="/"> <img src="{% static 'imgs/AUBURN automóveis.svg' %}" alt="logo Auburn"></a>
+      <ul class="btn-container">
+        {% if not user.is_authenticated %}
+
+
+
+        <li class="btn acessar">
+          <a href="{% url 'login' %}">
+            <span>Acesse</span>
+            <img src="{% static 'imgs/login.svg' %}" alt="" class="icon">
+          </a>
+        </li>
+        <li class="btn cadastro">
+          <a href="{% url 'criar_conta' %}">
+            <span>Cadastre-Se</span>
+            <img src="{% static 'imgs/register.svg' %}" alt="" class="icon">
+          </a>
+        </li>
+        {% else %}
+        <li>
+          Olá, {{user.username | upper}}
+        </li>
+        <li class="btn acessar">
+          <a href="{% url 'logout' %}">
+            <span>Sair</span>
+            <img src="{% static 'imgs/logout.svg' %}" alt="" class="icon">
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+    </nav>
+
+
+
+  </header>
+  <div class="hr"></div>
+  <header class="container">
+    <nav class="menu-secundario">
+      <ul>
+        <li><a href="" class="active">Ínicio</a></li>
+        <li><a href="">Veículos</a></li>
+        {% if user.is_authenticated %}
+
+        <li><a href="{% url 'register' %}">Venda seu veículo</a></li>
+        {% endif %}
+      </ul>
+      <div class="redes-sociais">
+        <span>Siga nas Redes Sociais:</span>
+        <div class="redes-sociais-icones">
+          <a href=""><img src="{% static 'imgs/facebook.svg' %}" alt="facebook-svg" class="icon sm"></a>
+          <a href=""><img src="{% static 'imgs/instagram.svg' %}" alt="instagram-svg" class="icon sm"></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  {% block main %}
+
+  {% endblock main %}
+
+
+
+
+
+
+
+
+  <footer class=" container">
+    <div class="conteudo-footer">
+      <div>
+        <img src="{% static 'imgs/AUBURN automóveis.svg' %}" alt="">
+        <div class="redes-sociais-footer" style="margin-top: 20px;">
+          <p style="font-weight: 700;">Siga nas Redes Sociais:</p>
+          <div class="redes-sociais-icones">
+            <a href=""><img src="{% static 'imgs/facebook-red.svg' %}" alt="facebook-svg" class="icon sm"></a>
+            <a href=""><img src="{% static 'imgs/instagram-redl.svg' %}" alt="instagram-svg" class="icon sm"></a>
+          </div>
+        </div>
+
+      </div>
+      <div class="endereco">
+        <div class="endereco-titulo">
+          <img src="{% static 'imgs/endereco.svg' %}" alt="">
+          <span>Endereço</span>
+        </div>
+        <p>Av.Ataulfo de Paiva, 1004 - 22440-035</p>
+        <p>Leblon, Rio de Janeiro - RJ</p>
+      </div>
+
+      <div class="horario">
+        <div class="horario-titulo">
+          <img src="{% static 'imgs/horario.svg' %}" alt="">
+          <span>Horário de Funcionamento</span>
+        </div>
+        <p>07:00 as 20:00 segunda á sexta</p>
+        <p>09:00 ás 16:00 aos sábados</p>
+      </div>
+
+      <div class="contatos">
+        <div class="contatos-titulo">
+
+          <span>Contatos</span>
+        </div>
+        <p><img src="{% static 'imgs/telefone.svg '%}" alt=""> (21) 9 5555-6672</p>
+        <p><img src="{% static 'imgs/whatsapp.svg' %}" alt=""> (21) 9 5555-8244 </p>
+
+      </div>
+
+    </div> <!-- fim do grid conteudo footer-->
+
+
+    </div>
+
+
+  </footer>
+  <div class="hr fim"></div>
+  <div class="copy container">
+    © Copyright 2024 - AUBURN<br>
+    Todos os direitos reservados
+  </div>
+</body>
+
+</html>

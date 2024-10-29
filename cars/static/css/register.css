@@ -1,0 +1,146 @@
+#register header span {
+  padding-right: 12px;
+}
+.conteudo-register {
+  height: 751px;
+  background: url("../imgs/bg_register.jpg");
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: minmax(auto, 622px) 1fr;
+}
+.container-register {
+  background: rgba(217, 217, 217, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  padding: 40px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.container-register form {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+
+#register input[type="text"],
+#register input[type="number"] {
+  border-radius: 55px;
+  border: 2px solid #1caafa;
+  background-color: #fff;
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  font-size: 18px;
+}
+
+#register .titulo {
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+#register label {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+}
+#register .register {
+  width: 100%;
+  background: linear-gradient(180deg, #faac1c 0%, #eea011 92.71%);
+  border: none;
+  &:hover {
+    transition: 0.2s;
+    background: linear-gradient(180deg, #f1b23d 0%, #f1b23d 92.71%);
+  }
+}
+#btn-container-register {
+  margin-top: 20px;
+  grid-column: 1/-1;
+}
+
+input[type="file"] {
+  outline: none;
+  padding: 4px;
+}
+
+input[type="file"]:focus-within::file-selector-button,
+input[type="file"]:focus::file-selector-button {
+  outline: 2px solid #0964b0;
+  outline-offset: 2px;
+}
+
+input[type="file"]::before {
+  top: 16px;
+}
+
+input[type="file"]::after {
+  top: 14px;
+}
+
+input[type="file"] {
+  position: relative;
+}
+
+input[type="file"]::file-selector-button {
+  width: 134px;
+  color: transparent;
+}
+
+input[type="file"]::before {
+  position: absolute;
+  pointer-events: none;
+  left: 45px;
+  color: #0964b0;
+  content: "Upload File";
+}
+
+input[type="file"]::after {
+  position: absolute;
+  pointer-events: none;
+  left: 16px;
+  height: 24px;
+  width: 24px;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230964B0'%3E%3Cpath d='M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM7 9l1.41 1.41L11 7.83V16h2V7.83l2.59 2.58L17 9l-5-5-5 5z'/%3E%3C/svg%3E");
+}
+
+input[type="file"]::file-selector-button {
+  border-radius: 55px;
+  padding: 16px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid #1caafa;
+  margin-right: 10px;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  transition: background-color 200ms;
+}
+
+/* file upload button hover state */
+input[type="file"]::file-selector-button:hover {
+  background-color: #f3f4f6;
+}
+
+/* file upload button active state */
+input[type="file"]::file-selector-button:active {
+  background-color: #e5e7eb;
+}
+
+@media (max-width: 800px) {
+  #register label {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .conteudo-register {
+    height: auto;
+  }
+  .container-register form {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+}

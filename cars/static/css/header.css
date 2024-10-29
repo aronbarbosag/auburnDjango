@@ -1,0 +1,118 @@
+header {
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+#home header span {
+  padding-right: 12px;
+}
+.menu-principal {
+  padding-top: 20px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-secundario {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-secundario ul {
+  display: flex;
+  gap: 40px;
+  font-weight: 600;
+}
+
+.menu-secundario ul li:hover {
+  color: #f15f64;
+  transition: 0.2s;
+}
+
+.menu-secundario ul li a {
+  padding: 10px;
+}
+
+.redes-sociais {
+  padding: 10px;
+  display: flex;
+}
+
+.redes-sociais-icones {
+  display: flex;
+  gap: 10px;
+}
+/*----------------------------- medias queries-----------------------------*/
+
+@media (max-width: 1300px) {
+  .container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .btn {
+    display: inline-flex;
+    padding: 8px 25px;
+    border: 1px solid #000;
+    border-radius: 47px;
+    width: max-content;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+  }
+  .icon {
+    width: 20px;
+  }
+}
+
+@media (max-width: 860px) {
+  .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .menu-secundario ul {
+    display: block;
+  }
+  .btn-container a span {
+    display: none;
+  }
+  .btn-container .btn {
+    border-radius: 50%;
+    padding: 10px;
+    border: none;
+  }
+  .btn.cadastro {
+    background: transparent;
+  }
+  .icon {
+    width: 30px;
+  }
+  .redes-sociais {
+    display: none;
+  }
+  .menu-secundario ul {
+    display: flex;
+  }
+}
+
+@media (max-width: 500px) {
+  .menu-secundario {
+    font-size: 14px;
+  }
+  .menu-secundario ul {
+    gap: 10px;
+  }
+  .btn-container {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

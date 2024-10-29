@@ -1,0 +1,132 @@
+#car header span {
+  padding-right: 20px;
+}
+#car #car-img {
+  object-fit: cover;
+  object-position: right;
+}
+.container-car-view {
+  position: relative;
+}
+.car-conteudo {
+  width: calc(100% - 600px);
+}
+
+.car-item {
+  background-color: #fff;
+  padding: 50px;
+  position: relative;
+  top: -100px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 40px;
+  align-items: flex-start;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.conteudo-direita {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 110px;
+  margin-top: 74px;
+
+  justify-content: center;
+}
+
+.conteudo-direita li {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0px 20px;
+  margin-bottom: 20px;
+}
+.conteudo-direita img {
+  width: 30px;
+}
+
+.conteudo-direita li p {
+  font-size: 14px;
+  font-weight: 600;
+}
+.conteudo-direita li span {
+  color: #4a4a4a;
+  font-size: 18px;
+}
+
+.conteudo-direita li p,
+.conteudo-direita li span {
+  grid-column: 2;
+  align-self: flex-start;
+}
+
+#car .preco {
+  color: #ff6902;
+  font-size: 32px;
+  font-weight: 700;
+  grid-column: 1/-1;
+  text-align: center;
+}
+#car .btn-entrar-em-contato {
+  grid-column: 1/-1;
+}
+
+#car .btn-entrar-em-contato a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(180deg, #f15f64 0%, #e2494e 76.12%);
+  padding: 10px 20px;
+  border-radius: 47px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  &:hover {
+    background: #f17d81;
+  }
+}
+
+@media (max-width: 1530px) {
+  .car-item {
+    grid-template-columns: auto;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 30px;
+  }
+  .car-conteudo {
+    padding: 40px;
+    width: 80%;
+  }
+  .conteudo-direita img {
+    min-width: 20px;
+  }
+  .conteudo-direita li {
+    gap: 10px;
+  }
+  .conteudo-direita {
+    gap: 15px;
+  }
+  .conteudo-direita li span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  #car .btn-entrar-em-contato a {
+    font-size: 16px;
+  }
+  #car .btn-entrar-em-contato img {
+    width: 20px;
+  }
+  #car .preco {
+    font-size: 18px;
+  }
+
+  #car .conteudo-direita li {
+    gap: 5px;
+  }
+  #car .car-item {
+    top: -180px;
+  }
+}

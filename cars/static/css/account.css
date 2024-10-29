@@ -1,0 +1,72 @@
+#account header span {
+  padding-right: 12px;
+}
+.conteudo-criar-conta {
+  height: 751px;
+  background: url("../imgs/bg-account.jpg");
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: minmax(auto, 622px) 1fr;
+}
+
+#account label {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+}
+#account .container-login input {
+  border-radius: 55px;
+  border: 2px solid #1caafa;
+  background-color: #fff;
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 60px;
+  font-size: 18px;
+}
+
+#account .senha2 {
+  margin-bottom: 40px;
+}
+
+#account button {
+  width: 100%;
+  background: linear-gradient(180deg, #faac1c 0%, #eea011 92.71%);
+  border: none;
+  &:hover {
+    transition: 0.2s;
+    background: linear-gradient(180deg, #f1b23d 0%, #f1b23d 92.71%);
+  }
+}
+
+#account input {
+  margin-bottom: 10px;
+}
+
+#account #id_username {
+  background: url("../imgs/username.svg");
+  background-size: 28px 28px;
+  background-repeat: no-repeat;
+  background-position: 20px 5px;
+  background-color: #fff;
+}
+/* #account #email {
+  background: url('../imgs/msg.svg');
+  background-size: 28px 28px;
+  background-repeat: no-repeat;
+  background-position: 20px 5px;
+  background-color: #fff;
+} */
+
+#account input[type="password"] {
+  background: url("../imgs/password.svg");
+  background-size: 28px 28px;
+  background-repeat: no-repeat;
+  background-position: 20px 5px;
+  background-color: #fff;
+}
+
+#account .container-login .titulo {
+  margin-bottom: 10px;
+}

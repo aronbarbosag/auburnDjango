@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block main %}
+{% load static %}
+
+<main class="conteudo-login container">
+  <div class="container-login">
+    <div class="titulo">Faça seu login para continuar</div>
+    <form action="" method="post">
+      {% csrf_token %}
+      <div class="email">
+        <label for="email">Usuário</label>
+        <input type="text" id="email" name="username" autocomplete="off">
+      </div>
+      <div class="senha">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="password" autocomplete="off">
+      </div>
+      <span id="esqueceu-senha"><a href="">Esqueceu sua senha ?</a></span>
+      <div>
+        <button type="submit" class="btn acessar login">Acesse<img src="{% static 'imgs/loginBranco.svg' %}" alt=""></button>
+      </div>
+    </form>
+    <span style="display: block; margin-top: 30px; text-align: center;">Não tem uma conta ?<span style="color: #FAAC1C;"><a href=""> Cadastre-se</a></span></span>
+
+  </div>
+</main>
+{% endblock main %}

@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+{% block main %}
+
+<main>
+  <div class="container-car-view ">
+    <div class="bg-red" style="background-color: #CC2D32;height: 157px;">
+
+    </div>
+    <div class="car-conteudo container">
+      <div class="car-item">
+        <div class="conteudo-esquerda">
+
+          <div class="titulo" style="font-size: 38px; font-weight: 700;">{{car.marca}}/{{car.modelo}}</div>
+          <div class="descricao">{{car.marca}} {{car.modelo}} {{car.ano_lancamento}} {{car.combustivel}}</div>
+          <div class="car-img"><img src="{{car.foto_carro.url}}" alt="" id="car-img"></div>
+        </div>
+        <div class="conteudo-direita">
+          <div class="info-esquerda">
+            <ul>
+              <li>
+
+                <img src="{% static 'imgs/ano.svg' %}" alt="">
+                <span>Ano/Modelo</span>
+                <p>{{car.ano_fabrica}}/{{car.ano_lancamento}}</p>
+              </li>
+              <li>
+                <img src="{% static 'imgs/motor.svg' %}" alt="">
+                <span>Motor</span>
+                <p>{{car.motor}}</p>
+              </li>
+              <li>
+                <img src="{% static 'imgs/quilometragem.svg' %}" alt="">
+                <span>Quilometragem</span>
+                <p>{{car.quilometragem}}</p>
+              </li>
+            </ul>
+          </div>
+          <div class="info-direita">
+            <ul>
+              <li>
+                <img src="{% static 'imgs/cambio.svg' %}" alt="">
+                <span>Câmbio</span>
+                <p>{{car.cambio}}</p>
+              </li>
+              <li>
+                <img src="{% static 'imgs/combustivel.svg' %}" alt="">
+                <span>Combustível</span>
+                <p>{{car.combustivel}}</p>
+              </li>
+              <li>
+                <img src="{% static 'imgs/carro.svg' %}" alt="">
+                <span>Portas</span>
+                <p>4</p>
+              </li>
+            </ul>
+          </div> <!-- fim info direita-->
+          <p class="preco">R$ {{car.preco}}</p>
+          <div class="btn-entrar-em-contato">
+            <a href="">
+              <img src="{% static 'imgs/zap.svg' %}" alt="">
+              <span>Entrar Em Contato</span>
+            </a>
+          </div>
+        </div> <!-- conteudo direita-->
+      </div>
+
+    </div>
+  </div>
+</main>
+{% endblock main %}

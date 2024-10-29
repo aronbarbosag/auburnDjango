@@ -1,0 +1,107 @@
+main {
+  margin: 0 auto;
+}
+main h1 {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.grid-conteudo {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 46px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  border-radius: 5px;
+  background-color: #fff;
+  width: max-content;
+  padding: 20px;
+  font-family: 'Open Sans';
+  display: grid;
+  justify-content: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+#home .card img {
+  max-width: 345px;
+}
+.card-info {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  gap: 20px;
+}
+#home .titulo {
+  grid-column: 1/-1;
+  text-align: center;
+  font-weight: 700;
+}
+#home .ano {
+  font-weight: 600;
+  grid-column: 1;
+}
+#home .quilometragem {
+  grid-column: 2;
+  font-weight: 600;
+}
+#home .preco {
+  grid-column: 1/-1;
+  text-align: center;
+  color: #ff6902;
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.btn.verMais {
+  background: linear-gradient(180deg, #e2494e 0%, #cc2d32 76.12%);
+  border: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  justify-self: center;
+  width: 254px;
+  &:hover {
+    background: linear-gradient(180deg, #ff5564 0%, #ff5564 76.12%);
+  }
+}
+.verTodosVeiculos {
+  color: #ff6902;
+  border: 2px solid #ff6902;
+  font-weight: 600;
+  font-size: 20px;
+  &:hover {
+    color: #fa9048;
+    border: 2px solid #fa9048;
+    transition: 0.2s;
+  }
+}
+.btn-final {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 226px;
+}
+@media (max-width: 1200px) {
+  .grid-conteudo {
+    grid-template-columns: repeat(2, auto);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-conteudo {
+    grid-template-columns: repeat(1, auto);
+    gap: 20px;
+  }
+  .verTodosVeiculos {
+    font-size: 14px;
+  }
+  main h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,84 @@
+#login header span {
+  padding-right: 12px;
+}
+
+.conteudo-login {
+  height: 751px;
+  background: url("../imgs/bg_login.jpg");
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: minmax(auto, 622px) 1fr;
+}
+
+.container-login {
+  background: rgba(217, 217, 217, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  padding: 40px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+.container-login .titulo {
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+#login label {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#login .container-login input {
+  border-radius: 55px;
+  border: 2px solid #1caafa;
+  background-color: #fff;
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 60px;
+  font-size: 18px;
+}
+#login .email {
+  margin-bottom: 30px;
+}
+#login #email {
+  background: url("../imgs/email.svg");
+  background-size: 28px 28px;
+  background-repeat: no-repeat;
+  background-position: 20px 5px;
+  background-color: #fff;
+}
+
+#login #senha {
+  margin-bottom: 10px;
+  background: url("../imgs/password.svg");
+  background-size: 28px 28px;
+  background-repeat: no-repeat;
+  background-position: 20px 5px;
+  background-color: #fff;
+}
+#login #esqueceu-senha {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+#login button {
+  background: #e2494e;
+  border: none;
+  width: 100%;
+  &:hover {
+    background: #f17d81;
+  }
+}
+
+@media (max-width: 800px) {
+  .container-login {
+    margin-top: 40px;
+  }
+  .conteudo-login {
+    grid-template-columns: auto;
+  }
+}
